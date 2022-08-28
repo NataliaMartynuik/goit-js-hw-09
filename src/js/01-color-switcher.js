@@ -13,12 +13,14 @@ function changeBodyColor() {
     let colorValue = getRandomHexColor();
     bodyRef.style.backgroundColor = colorValue;
     startBtn.setAttribute('disabled', 'disabled');
+    stopBtn.removeAttribute('disabled', 'disabled');
   }, PROMPT_DELAY);
 };
 
 function stopChangeBodyColor() {
   clearInterval(intervalId);
   startBtn.removeAttribute('disabled', 'disabled');
+  stopBtn.setAttribute('disabled', 'disabled');
 };
 
 startBtn.addEventListener('click', changeBodyColor);
