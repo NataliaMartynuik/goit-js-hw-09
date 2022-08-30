@@ -10,7 +10,7 @@ function getRandomHexColor() {
 }
 
 function changeBodyColor() {
-  intarvalId = setInterval(() => {
+  intervalId = setInterval(() => {
     let colorValue = getRandomHexColor();
     bodyRef.style.backgroundColor = colorValue;
     startBtn.setAttribute('disabled', 'disabled');
